@@ -1,0 +1,27 @@
+@media (max-width: 1280px) and (min-width: 768px) {
+  .modal {
+    max-width: 63rem;
+    max-height: 38rem;
+    left: calc(50% - 63rem / 2);
+  }
+  .modal__img {
+    max-height: 35rem;
+    max-width: 35rem;
+  }
+  .modal__content-title {
+    padding: 1rem 0 1rem 0;
+  }
+  .modal__content-description {
+    font-size: 1.3rem;
+    padding-top: 2rem;
+  }
+  .modal__content-list {
+    padding-top: 2rem;
+    padding-left: 1.1rem;
+    font-size: 1.3rem;
+  }
+  .modal__content-item {
+    margin-bottom: 0.5rem;
+  }
+}
+/*# sourceMappingURL=modal_768.css.map */

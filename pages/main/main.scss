@@ -1,0 +1,467 @@
+@import '../../utilities/const.scss';
+@import '../../utilities/mixins';
+@import '../../layout/footer.scss';
+@import '../../layout/modal.scss';
+
+:root {
+  font-size: 10px;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100vw;
+  max-width: 100%;
+  position: absolute;
+  top: 5.8rem;
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 120rem;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $color-primary;
+    @include logo_title;
+    margin: 0;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+    @include logo_subtitle;
+  }
+}
+
+.menu {
+  width: 44.3rem;
+  display: flex;
+  &__mobile {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: white;
+    font-family: Arial;
+    font-size: 1.5rem;
+    line-height: 160%;
+
+    &_active {
+      border-bottom: solid 3px $color-primary;
+    }
+
+    &_disabled {
+      color: $color-dark-s;
+    }
+  }
+
+  &__link:hover {
+    color: $color-light-l;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  padding-top: 18rem;
+  background: $start-screen-gradient-background;
+
+  &__content {
+    display: flex;
+  }
+
+  &__image {
+    height: 728px;
+  }
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 8rem;
+  max-width: 50rem;
+
+  &__title {
+    color: white;
+    max-width: 31rem;
+    @include h2;
+  }
+
+  &__subtitle {
+    color: $color-dark-s;
+    line-height: 160%;
+    margin-top: 4.2rem;
+    @include paragraph-l;
+  }
+
+  &__button {
+    margin-top: 4.2rem;
+    width: 20.7rem;
+    border-radius: 10rem;
+    border: none;
+    padding: 1.5rem 4.5rem;
+    background-color: $color-primary;
+  }
+
+  &__link {
+    font-family: Georgia;
+    color: $color-dark-3xl;
+    font-size: 1.67rem;
+    line-height: 130%;
+    letter-spacing: 0.102rem;
+    text-decoration: none;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 3px solid $color-primary;
+    padding: 1.2rem 4rem;
+  }
+}
+
+.about {
+  display: flex;
+
+  & .wrapper {
+    width: 120rem;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    padding-right: 12.05rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 43rem;
+    padding-top: 1.5rem;
+  }
+
+  &__title {
+    max-width: 30rem;
+    @include h3;
+    letter-spacing: 0.199rem;
+    color: $color-dark-l;
+  }
+
+  &__description {
+    margin-top: 2.5rem;
+
+    p {
+      &:nth-child(2) {
+        margin-top: 2.5rem;
+      }
+      @include paragraph-l;
+      color: $color-dark-xl;
+    }
+  }
+}
+
+.pets {
+  background-color: $color-light-l;
+
+  &__wrapper {
+    width: 100%;
+    margin: 8rem 0 10rem;
+  }
+
+  &__title {
+    max-width: 40rem;
+    @include h3;
+    text-align: center;
+    color: $color-dark-l;
+    margin: 0 auto;
+    span {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-button:hover {
+      cursor: pointer;
+    }
+    &-button {
+      @include slider_button;
+      min-height: 5.2rem;
+      min-width: 5.2rem;
+      padding: 0;
+      .reverted {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__cards {
+    margin: 5.7rem 0;
+    height: 43.5rem;
+    width: 99rem;
+    overflow: hidden;
+    position: relative;
+    &-slider {
+      display: none;
+      justify-content: space-between;
+      position: absolute;
+      animation: 0.5s ease-in-out;
+      width: inherit;
+    }
+
+    &-card {
+      background-color: $color-light-s;
+      display: flex;
+      flex-direction: column;
+      border-radius: 9px;
+      &-name {
+        font-family: Georgia;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        letter-spacing: 0.06rem;
+        color: $color-dark-l;
+        text-align: center;
+        margin: 3rem 0;
+      }
+      &-button {
+        background-color: $color-light-s;
+        border: 2px solid $color-primary;
+        border-radius: 45px;
+        padding: 1.3rem 4.3rem;
+        margin: 0 auto 3rem;
+        @include button_text;
+        display: block;
+      }
+      &-button:hover {
+        cursor: pointer;
+        background-color: #f1cdb3;
+      }
+    }
+
+    &-card:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    background-color: $color-primary;
+    border: none;
+    border-radius: 45px;
+    padding: 1.6rem 4.5rem;
+    @include button_text;
+    display: block;
+    margin: 0 auto;
+    &_link {
+      font-family: Georgia;
+      color: $color-dark-3xl;
+      text-decoration: none;
+    }
+  }
+
+  &__button:hover {
+    cursor: pointer;
+  }
+}
+
+.help {
+  display: flex;
+  padding-bottom: 4rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    max-width: 31rem;
+    margin: 0 auto;
+    margin-top: 8rem;
+    h3 {
+      @include h3;
+      color: $color-dark-l;
+      text-align: center;
+    }
+  }
+
+  &__icon_wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 2fr);
+    padding-bottom: 6rem;
+    column-gap: 8rem;
+  }
+
+  &__icon {
+    grid-column: span 2;
+    padding-top: 5.8rem;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    h4 {
+      @include h4;
+      color: $color-dark-l;
+      text-align: center;
+      margin-top: 3.4rem;
+    }
+  }
+
+  &__icon:nth-child(6) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  &__icon:nth-child(n + 6) {
+    padding-top: 5.7rem;
+    h4 {
+      margin-top: 2.7rem;
+    }
+  }
+}
+
+.donation {
+  display: flex;
+  background-color: $color-light-l;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 4rem 10rem 4rem;
+  }
+  &__image {
+    padding-right: 3rem;
+    img {
+      padding-top: 1rem;
+    }
+  }
+  &__content {
+    width: 38rem;
+    &-header {
+      @include h3;
+      color: $color-dark-l;
+    }
+    &-header-small {
+      color: $color-dark-l;
+      @include h5;
+      padding: 2rem 0;
+    }
+    &-bank {
+      display: flex;
+      background-color: $color-primary;
+      max-width: 35rem;
+      padding: 1rem 0;
+      border-radius: 10px;
+      img {
+        padding-left: 1.4rem;
+        padding-right: 1.8rem;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+      }
+      h4 {
+        @include h4;
+        color: $color-dark-l;
+        letter-spacing: 0.11rem;
+      }
+    }
+    &-description {
+      color: $color-dark-m;
+      padding-top: 2rem;
+      @include paragraph-s;
+    }
+  }
+}
+
+/* Slider Animation */
+.current,
+.next {
+  display: flex;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.footer {
+  background: url('../../assets/images/noise_transparent@2x.png'),
+    radial-gradient(110.67%538.64% at 5.73%50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}

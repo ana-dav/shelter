@@ -1,0 +1,35 @@
+@import '../utilities/const';
+@import '../utilities/mixins';
+@media (max-width: 767px) {
+  .footer {
+    &__wrapper {
+      flex-direction: column;
+      max-width: 76rem;
+      justify-content: center;
+    }
+    &__content {
+      width: 30rem;
+    }
+    &__header {
+      font-size: 2.5rem;
+      letter-spacing: 0.15rem;
+      text-align: center;
+    }
+    &__questions {
+      margin: auto;
+      .footer__content {
+        padding-left: 2rem;
+      }
+    }
+    &__location {
+      margin: 4rem auto 0 auto;
+      .footer__content {
+        margin-top: 2.8rem;
+      }
+    }
+    &__image {
+      margin: 4rem auto 0 auto;
+      max-width: 32rem;
+    }
+  }
+}

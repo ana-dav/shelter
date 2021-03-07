@@ -1,0 +1,49 @@
+@import '../utilities/const';
+@import '../utilities/mixins';
+
+.footer {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 120rem;
+    padding-top: 0;
+  }
+  &__questions {
+    max-width: 27.8rem;
+    margin-top: 5.6rem;
+    margin-bottom: 6rem;
+  }
+  &__location {
+    max-width: 32.2rem;
+    margin-top: 5.6rem;
+    margin-bottom: 6rem;
+  }
+  &__icon {
+    padding-right: 2rem;
+  }
+  &__header {
+    @include h3;
+    color: white;
+  }
+  &__content {
+    display: flex;
+  }
+  &__questions &__content {
+    margin-top: 4rem;
+  }
+  &__location &__content {
+    margin-top: 3.3rem;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    h4 {
+      @include h4;
+      color: $color-primary;
+    }
+  }
+  &__image {
+    margin-top: 4rem;
+  }
+}

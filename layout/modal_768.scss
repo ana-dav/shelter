@@ -1,0 +1,28 @@
+@media (max-width: 1280px) and (min-width: 768px) {
+  .modal {
+    max-width: 63rem;
+    max-height: 38rem;
+    left: calc(50% - 63rem / 2);
+    &__img {
+      max-height: 35rem;
+      max-width: 35rem;
+    }
+    &__content {
+      &-title {
+        padding: 1rem 0 1rem 0;
+      }
+      &-description {
+        font-size: 1.3rem;
+        padding-top: 2rem;
+      }
+      &-list {
+        padding-top: 2rem;
+        padding-left: 1.1rem;
+        font-size: 1.3rem;
+      }
+      &-item {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

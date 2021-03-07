@@ -1,0 +1,37 @@
+@media (max-width: 767px) {
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 76rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__content {
+    width: 30rem;
+  }
+  .footer__header {
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+    text-align: center;
+  }
+  .footer__questions {
+    margin: auto;
+  }
+  .footer__questions .footer__content {
+    padding-left: 2rem;
+  }
+  .footer__location {
+    margin: 4rem auto 0 auto;
+  }
+  .footer__location .footer__content {
+    margin-top: 2.8rem;
+  }
+  .footer__image {
+    margin: 4rem auto 0 auto;
+    max-width: 32rem;
+  }
+}
+/*# sourceMappingURL=footer_320.css.map */

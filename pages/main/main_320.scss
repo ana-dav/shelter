@@ -1,0 +1,262 @@
+@import '../../utilities/const';
+@import '../../utilities/mixins';
+@import '../../layout/footer_320';
+@import '../../layout/hamburger_menu.scss';
+@import '../../layout/modal_320.scss';
+
+@media (max-width: 767px) {
+  .wrapper {
+    max-width: 90%;
+  }
+
+  .header {
+    top: 3rem;
+    .logo {
+      &__subtitle {
+        text-align: left;
+      }
+    }
+    .wrapper {
+      max-width: 93%;
+    }
+    .menu {
+      width: 24%;
+
+      .list {
+        display: none;
+        flex-direction: column;
+        padding-top: 8rem;
+        padding-left: 2rem;
+        min-width: 20rem;
+        position: initial;
+        right: 5rem;
+      }
+      .list .show {
+        display: flex;
+        padding-top: 14.8rem;
+        align-items: center;
+        width: inherit;
+        .list__item {
+          width: 100%;
+          transition: all 0.15s ease;
+          padding-top: 4rem;
+        }
+        .list__item:nth-child(1) {
+          padding: 0;
+        }
+        .list__link {
+          font-size: 3.2rem;
+        }
+      }
+    }
+    .menu__mobile-toggle {
+      display: none;
+    }
+    .menu__mobile-toggle:checked + .list {
+      display: block;
+    }
+
+    .footer.show {
+      background-color: rgba(41, 41, 41, 0.6);
+    }
+  }
+
+  .main {
+    .hero {
+      padding-top: 15rem;
+    }
+  }
+
+  //   .hero.show {
+  //     background: rgba(41, 41, 41, 0.6);
+  //     -webkit-background-size: cover;
+  //     -moz-background-size: cover;
+  //     -o-background-size: cover;
+  //     background-size: cover;
+  //   }
+
+  .content-section {
+    padding: 0;
+    margin: 0 auto;
+    max-width: inherit;
+    align-items: center;
+    &__title {
+      font-size: 2.5rem;
+      text-align: center;
+      letter-spacing: 0.14rem;
+    }
+    &__subtitle {
+      text-align: center;
+      letter-spacing: 0;
+      width: 29.5rem;
+    }
+    &__button {
+      margin: 4.1rem 0 10.6rem;
+    }
+  }
+
+  .hero {
+    &__content {
+      max-width: -moz-available;
+      flex-direction: column;
+    }
+    &__image {
+      width: 90%;
+      height: 90%;
+      margin-left: 4rem;
+    }
+  }
+
+  .about {
+    &__content {
+      padding: 0;
+    }
+    .wrapper {
+      max-width: 90%;
+      padding: 4.2rem 0 4.5rem;
+      flex-direction: column-reverse;
+    }
+    &__title {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    &__description {
+      text-align: justify;
+      max-width: 95%;
+      margin: 2.5rem auto 0;
+    }
+    &__description p:nth-child(2) {
+      margin-top: 2.1rem;
+    }
+    &__image {
+      width: 90%;
+      &-wrapper {
+        margin-left: 1.4rem;
+        padding-top: 4rem;
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .pets {
+    &__title {
+      font-size: 2.5rem;
+      letter-spacing: 0.13rem;
+    }
+    &__content {
+      flex-wrap: wrap;
+      justify-content: center;
+      &-button {
+        order: 1;
+        margin: 2rem 4rem 0;
+      }
+    }
+    &__cards {
+      width: 97%;
+      position: relative;
+      height: 43.5rem;
+      overflow: hidden;
+      margin: 4rem auto 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      &-card {
+        margin: 0 auto;
+      }
+      &-card:nth-child(2) {
+        display: none;
+      }
+      &-card:nth-child(3) {
+        display: none;
+      }
+      &-card-name {
+        margin: 3.1rem 0;
+      }
+    }
+    &__button {
+      margin-top: 4.2rem;
+    }
+  }
+
+  .help {
+    padding-bottom: 4.2rem;
+    .wrapper {
+      max-width: 100%;
+      justify-content: center;
+    }
+    &__wrapper {
+      max-width: inherit;
+    }
+    &__header {
+      max-width: 75%;
+      margin-top: 4.25rem;
+      h3 {
+        font-size: 2.5rem;
+        letter-spacing: 0.16rem;
+      }
+    }
+    &__icon {
+      grid-column: span 1;
+      padding: 0;
+      &:nth-child(n + 6) {
+        padding: 0;
+      }
+      &:nth-child(6) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+        margin-top: 2.2rem;
+      }
+      &_wrapper-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 2rem 2.1rem;
+        padding-top: 4.2rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .donation {
+    &__wrapper {
+      width: 32rem;
+      margin: 0 auto;
+      flex-direction: column-reverse;
+      padding: 4.4rem 3.5rem 0 0.5rem;
+    }
+    &__content {
+      max-width: -moz-available;
+      &-header {
+        font-size: 2.5rem;
+        text-align: center;
+        letter-spacing: 0.16rem;
+        &-small {
+          letter-spacing: 0.01rem;
+          padding: 2.2rem 0;
+        }
+      }
+      &-bank {
+        h4 {
+          font-size: 1.5rem;
+          padding-top: 0.5rem;
+        }
+      }
+      &-description {
+        text-align: justify;
+      }
+    }
+    &__image {
+      padding: 4.6rem 0 4.1rem 1.3rem;
+      img {
+        padding: 0;
+        width: 95%;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  max-width: 120rem;
+  padding-top: 0;
+}
+
+.footer__questions {
+  max-width: 27.8rem;
+  margin-top: 5.6rem;
+  margin-bottom: 6rem;
+}
+
+.footer__location {
+  max-width: 32.2rem;
+  margin-top: 5.6rem;
+  margin-bottom: 6rem;
+}
+
+.footer__icon {
+  padding-right: 2rem;
+}
+
+.footer__header {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  color: white;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__questions .footer__content {
+  margin-top: 4rem;
+}
+
+.footer__location .footer__content {
+  margin-top: 3.3rem;
+}
+
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__link h4 {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  color: #f1cdb3;
+}
+
+.footer__image {
+  margin-top: 4rem;
+}
+/*# sourceMappingURL=footer.css.map */

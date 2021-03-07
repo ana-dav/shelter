@@ -1,0 +1,105 @@
+@import '../../utilities/const';
+@import '../../utilities/mixins';
+@import '../../layout/footer_768';
+@import '../../layout/modal_768';
+
+@media (max-width: 1280px) and (min-width: 768px) {
+  .wrapper {
+    max-width: 70.8rem;
+  }
+
+  .header {
+    top: 3rem;
+    .menu__mobile {
+      display: none;
+    }
+  }
+
+  .hero {
+    padding-top: 15rem;
+    &__content {
+      flex-direction: column;
+      max-width: 56.9rem;
+    }
+    &__image {
+      width: 56.9rem;
+      height: 59.3rem;
+      margin-left: 7rem;
+    }
+  }
+
+  .content-section {
+    padding-left: 5.5rem;
+    padding-bottom: 10rem;
+    &__button {
+      margin-left: 12.5rem;
+    }
+  }
+
+  .about {
+    .wrapper {
+      max-width: 43.7rem;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__content {
+      padding-top: 0;
+    }
+    &__image {
+      width: 90%;
+    }
+    &__image-wrapper {
+      margin-left: 7rem;
+      padding-top: 8rem;
+      width: 76%;
+      padding-right: 0;
+    }
+  }
+
+  .pets {
+    &__cards {
+      width: 60rem;
+      &-card:nth-child(3) {
+        display: none;
+      }
+    }
+    &__content {
+      &-button:first-child {
+        margin-right: 2rem;
+      }
+      &-button:last-child {
+        margin-left: 2rem;
+      }
+    }
+    &__button {
+      margin-top: 0.4rem;
+    }
+  }
+
+  .help {
+    &__icon {
+      grid-column: span 1;
+      padding-top: 5.3rem;
+      &_wrapper-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 7.5rem;
+      }
+      &:nth-child(6) {
+        grid-column-start: 3;
+      }
+    }
+  }
+
+  .donation {
+    &__wrapper {
+      padding: 0;
+      padding-top: 7.8rem;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__image {
+      padding: 5rem 0 9.6rem 0;
+    }
+  }
+}

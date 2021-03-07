@@ -1,0 +1,213 @@
+@import '../../utilities/const';
+@import '../../utilities/mixins';
+@import '../../layout/footer';
+@import '../../layout/modal.scss';
+
+:root {
+  font-size: 10px;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100vw;
+  min-height: 12rem;
+  max-width: 100%;
+  position: absolute;
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 120rem;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $color-dark-3xl;
+    @include logo_title;
+    margin: 0;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    color: $color-dark-3xl;
+    @include logo_subtitle;
+  }
+}
+
+.menu {
+  width: 44.3rem;
+  display: flex;
+  &__mobile {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    padding-bottom: 0.4rem;
+    color: $color-dark-s;
+    font-family: Arial;
+    font-size: 1.5rem;
+    line-height: 160%;
+    letter-spacing: 0;
+
+    &_active {
+      padding-bottom: 0;
+      color: $color-dark-3xl;
+      border-bottom: solid 3px $color-primary;
+    }
+
+    &_disabled {
+      color: $color-dark-l;
+    }
+  }
+
+  &__link:hover {
+    color: $color-dark-3xl;
+  }
+}
+
+.pets {
+  padding-top: 12rem;
+  background-color: $color-light-l;
+  &__wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 120rem;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__header {
+    margin: 8rem auto 5.9rem;
+    h3 {
+      text-align: center;
+      @include h3;
+      letter-spacing: 0.21rem;
+      color: $color-dark-l;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 4rem;
+    &-wrapper {
+      display: flex;
+      margin: 0 auto;
+      max-width: 120rem;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    &-card {
+      grid-column: span 2;
+      background-color: $color-light-s;
+      &-name {
+        @include h4;
+        color: $color-dark-l;
+        text-align: center;
+        padding-top: 2.7rem;
+        letter-spacing: 0.11rem;
+      }
+      &-button {
+        display: block;
+        margin: 3.1rem auto;
+        text-align: center;
+        background-color: $color-light-s;
+        border: 2px solid $color-primary;
+        border-radius: 45px;
+        padding: 1.26rem 4.3rem;
+      }
+      &-button:hover {
+        background-color: #f1cdb3;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__navigation {
+    margin: 6rem auto 0 auto;
+    padding-bottom: 9.7rem;
+    display: flex;
+    justify-content: center;
+    &-list {
+      display: flex;
+      width: 34rem;
+      justify-content: space-between;
+    }
+    &-item {
+      list-style-type: none;
+      display: block;
+      &:nth-child(-n + 2) button {
+        border-color: $color-dark-s;
+      }
+      &:nth-child(-n + 2) a {
+        color: $color-dark-s;
+      }
+      &:nth-child(n + 3) a {
+        color: $color-dark-3xl;
+      }
+      &:nth-child(3) button {
+        background-color: $color-primary;
+      }
+    }
+    &-button {
+      text-align: center;
+      background-color: $color-light-l;
+      border: 2px solid red;
+      border-radius: 50%;
+      height: 5.2rem;
+      width: 5.2rem;
+      border-color: $color-primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  background: url('../../assets/images/noise_transparent@2x.png'),
+    radial-gradient(110.67%538.64% at 5.73%50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}
+// .footer .wrapper {
+//   padding: 0;
+// }
+
+// .footer__questions .footer__content {
+//   margin-top: 4.1rem;
+// }
+
+// .footer__location .footer__content {
+//   margin-top: 3.4rem;
+// }

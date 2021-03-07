@@ -1,0 +1,22 @@
+@media (max-width: 1280px) and (min-width: 768px) {
+  .footer__wrapper {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    max-width: 70.8rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer h4 {
+    letter-spacing: 0.14rem;
+  }
+  .footer__questions {
+    margin-top: 3rem;
+    max-width: 31rem;
+    margin-right: 10%;
+  }
+  .footer__location {
+    margin-top: 3rem;
+  }
+}
+/*# sourceMappingURL=footer_768.css.map */

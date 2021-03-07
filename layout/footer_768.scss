@@ -1,0 +1,24 @@
+@import '../utilities/const';
+@import '../utilities/mixins';
+
+@media (max-width: 1280px) and (min-width: 768px) {
+  .footer {
+    &__wrapper {
+      justify-content: space-evenly;
+      max-width: 70.8rem;
+      flex-wrap: wrap;
+    }
+    h4 {
+      letter-spacing: 0.14rem;
+    }
+
+    &__questions {
+      margin-top: 3rem;
+      max-width: 31rem;
+      margin-right: 10%;
+    }
+    &__location {
+      margin-top: 3rem;
+    }
+  }
+}

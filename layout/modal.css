@@ -1,0 +1,138 @@
+.modal {
+  position: fixed;
+  top: calc(80% - 50rem);
+  left: calc(50% - 85.1rem / 2);
+  margin: 0 auto;
+  display: none;
+  border-radius: 9px;
+  background-color: #fafafa;
+  z-index: 1;
+}
+
+.modal__overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.modal__img {
+  height: 50rem;
+  width: 50rem;
+  border-radius: 9px;
+}
+
+.modal__content {
+  padding: 0 3rem 0 2rem;
+  max-width: 35.1rem;
+}
+
+.modal__content-title {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  padding: 5rem 0 1rem 0;
+}
+
+.modal__content-title-secondary {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+}
+
+.modal__content-description {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.09rem;
+  padding-top: 4rem;
+}
+
+.modal__content-list {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.09rem;
+  padding-top: 4rem;
+  padding-left: 1.4rem;
+  list-style: none;
+}
+
+.modal__content-list li::before {
+  content: '\2022';
+  color: #f1cdb3;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+.modal__content-item {
+  margin-bottom: 1rem;
+}
+
+.modal__content span:first-child {
+  font-weight: 700;
+}
+
+.modal_close-btn {
+  display: none;
+  position: absolute;
+  top: -5.5rem;
+  right: -5.5rem;
+  border: 3px solid #f1cdb3;
+  border-radius: 100%;
+  padding: 1.9rem;
+  background: none;
+  height: 5.2rem;
+  width: 5.2rem;
+  z-index: 2;
+}
+
+.modal_close-cross {
+  display: none;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.modal_close-cross:hover {
+  opacity: 1;
+}
+
+.modal_close-cross:before, .modal_close-cross:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: honeydew;
+}
+
+.modal_close-cross:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal_close-cross:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*# sourceMappingURL=modal.css.map */

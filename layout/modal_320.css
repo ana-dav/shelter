@@ -1,0 +1,33 @@
+@media (max-width: 767px) {
+  .modal {
+    max-width: 24rem;
+    max-height: 40rem;
+    left: calc(50% - 12rem);
+  }
+  .modal__img {
+    max-height: 0;
+    max-width: 0;
+  }
+  .modal__content {
+    padding: 0 1rem 0 1rem;
+  }
+  .modal__content-title {
+    padding: 1rem 0 1rem 0;
+  }
+  .modal__content-description {
+    font-size: 1.3rem;
+    padding-top: 2rem;
+  }
+  .modal__content-list {
+    padding-top: 2rem;
+    padding-left: 1.1rem;
+    font-size: 1.3rem;
+  }
+  .modal__content-item {
+    margin-bottom: 0.5rem;
+  }
+  .modal_close-btn {
+    left: calc(50% - 2.6rem);
+  }
+}
+/*# sourceMappingURL=modal_320.css.map */
